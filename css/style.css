@@ -1,0 +1,300 @@
+:root {
+	--primary-color: #34B8B0;
+	--secondary-color: #000000;
+}
+
+html,
+body {
+	/* https://css-tricks.com/couple-takes-sticky-footer/ */
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+/* For sticky footer - grow to fill the space */
+.content {
+	flex: 1 0 auto;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	overflow: none;
+	padding: 10px;
+}
+
+.app-header {
+    background: var(--primary-color);
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: fixed;
+  }
+
+
+.app-header .profile-icon{
+    height: 30px;
+    width: auto;
+    text-align: right;
+}
+
+.welcome {
+	background: white;
+	color: var(--secondary-color);
+	box-shadow: 3px 3px 10px #888888;
+	padding: 5%;
+	width: 100%;
+    margin: 48px auto 0px auto;
+}
+
+.welcome>* {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font: normal 17px 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+.welcome .progress-details {
+    display: flex;
+	align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.welcome .trimester {
+    text-align: right;
+    font: 17px 'Montserrat', sans-serif;
+}
+
+.welcome img {
+    width: 100%;
+}
+
+.start-due-dates {
+    display: flex;
+	align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.due-date {
+    text-align: right;
+}
+
+.date-label {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.date {
+    font: 18px;
+}
+
+.appointment {
+    background-image: url("../images/appointment-bkgnd.png");
+    background-size: cover;
+	color: var(--secondary-color);
+	box-shadow: 3px 3px 10px #888888;
+	padding: 3%;
+	width: 100%;
+    margin: 0 auto;
+}
+
+.appointment-card {
+    background: white;
+    padding: 3%;
+    border-radius: 13px;
+}
+
+.appointment-card-content {
+    display: flex;
+	align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.appointment-card-content p {
+    font-size: 10px;
+}
+
+.card-image {
+    width: 25%;
+}
+
+.doctor-image {
+    width: 100%;
+}
+
+.card-content-right {
+    text-align: right;
+}
+
+.card-content-left{
+    flex-grow: 2;
+    padding: 10px;
+}
+
+.card-content-right .calendar-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.this-week {
+	color: var(--secondary-color);
+	padding: 5%;
+	width: 100%;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+
+.this-week h2 {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    color: #707070;
+    font-weight: normal;
+}
+
+.this-week-cards {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.article-card {
+    display: inline-block;
+    border-radius: 20px;
+    border: 5px solid white;
+    height: 234px;
+    width: 233px;
+    padding-top: 20px;
+    padding-left: 16px;
+}
+
+.article-card .card-content {
+    width: 70%;
+    white-space: normal;
+}
+
+.article-card h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.article-card p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.article-card.card-1 {
+    background-color: #D4EDF7;
+    background-image: url("../images/card-1-image.png");
+    box-shadow: 0 3 16px  #D4EDF7;
+}
+
+.article-card.card-2 {
+    background-color: #F7D4D9;
+    background-image: url("../images/card-2-image.png");
+    box-shadow: 0 3 16px  #F7D4D9;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+    width: 20%;
+}
+
+.nav__link img{
+    height: 22px;
+    margin-bottom: 2px;
+}
+
+.nav__text {
+    font-size: 11px;
+}
+
+
+
+/* Splash */
+#splash {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: var(--primary-color);
+	height: 100vh;
+	width: 100%;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+#splash img {
+	width: 300px;
+}
+
+#splash.fade {
+	opacity: 0;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.grid .item img {
+		width: 60px;
+	}
+}
