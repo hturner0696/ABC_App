@@ -22,9 +22,9 @@ body {
 }
 
 /* For sticky footer - grow to fill the space */
-.content {
+/* .content {
 	flex: 1 0 auto;
-}
+} */
 
 .container {
 	width: 90%;
